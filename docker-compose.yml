@@ -9,8 +9,11 @@ services:
       replicas: 1
       resources:
         reservations:
-        cpus: 0.05
-        memory: 6M
+          cpus: '0.05'
+          memory: 50M
+        limits:
+          cpus: '0.01'
+          memory: 50M
     environment:
       - VIRTUAL_HOST=localhost
       - VIRTUAL_PORT=80
